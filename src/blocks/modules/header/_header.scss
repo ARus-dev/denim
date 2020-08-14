@@ -1,0 +1,183 @@
+.header {
+    &__top {
+        font-size: 24px;
+        font-weight: 800;
+        padding: 20px 0;
+        text-align: center;
+        @include _768 {
+            padding: 25px 0;
+        }
+    }
+    &__body {
+        background-color: $color-gray;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 15px 50px;
+        @include _768 {
+            padding: 45px;
+        }
+        @include _1024 {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 98px;
+        }
+    }
+    &__nav {
+        @include flex-row();
+        @include _1024 {
+            align-items: flex-start;
+            flex-direction: column;
+            &_right {
+                align-items: flex-end;
+            }
+        }
+    }
+    &__links {
+        display: flex;
+        @include _1024 {
+            flex-direction: column;
+        }
+    }
+    &__link {
+        color: $color-black;
+        font-size: 16px;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-right: 25px;
+            @include _768 {
+                margin-right: 35px;
+            }
+            @include _1024 {
+                margin: 0;
+                margin-bottom: 35px;
+            }
+        }
+    }
+    &__icons {
+        display: flex;
+        @include _1024 {
+            flex-direction: column;
+        }
+    }
+    &__icon {
+        height: 16px;
+        margin-left: 25px;
+        @include _768 {
+            height: 18px;
+            margin-left: 35px;
+        }
+        @include _1024 {
+            margin: 0;
+            margin-bottom: 35px;
+        }
+        &_arrow.tablet, &_arrow.desktop {
+            @include _768 {
+                height: 27px;
+                margin: 0;
+                &>svg {
+                    height: 27px;
+                    width: 10px;
+                }
+            }
+            @include _1024 {
+                margin: 0;
+            }
+        }
+        &>svg {
+            height: 16px;
+            width: 16px;
+            @include _768 {
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        padding: 0 59px;
+        @include _768 {
+            flex-direction: row-reverse;
+            padding: 0 30px 53px 80px;
+        }
+        @include _1024 {
+            margin: 0;
+            padding: 0 100px;
+        }
+    }
+    &__img {
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        &::before, &::after {
+            background-size: cover;
+            content: '';
+            height: 90px;
+            position: absolute;
+            width: 109px;
+            @include _768 {
+                height: 104px;
+                width: 141px;
+            }
+            @include _1024 {
+                height: 176px;
+                width: 232px;
+            }
+        }
+        &::before {
+            background-image: url('/img/header/header-img-bg-left.png');
+            background-image: url('/img/header/header-img-bg-left.webp');
+            left: -20px;
+            top: -20px;
+            @include _768 {
+                left: -30px;
+                top: -30px;
+            }
+            @include _1024 {
+                left: -50px;
+                top: -50px;
+            }
+        }
+        &::after {
+            background-image: url('/img/header/header-img-bg-right.png');
+            background-image: url('/img/header/header-img-bg-right.webp');
+            bottom: -20px;
+            right: -20px;
+            @include _768 {
+                bottom: -30px;
+                right: -30px;
+            }
+            @include _1024 {
+                bottom: -50px;
+                right: -50px;
+            }
+        }
+        @include _768 {
+            margin-bottom: 0;
+            margin-left: 67px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__picture {
+        position: relative;
+        z-index: 2;
+    }
+    &__subtitle {
+        color: #727A82;
+        font-size: 18px;
+    }
+    &__title {
+        color: $color-black;
+        font-family: Anton, sans-serif;
+        @include adaptiv-font(128, 86);
+        line-height: 100%;
+        margin: 10px 0 40px;
+    }
+    &__btn {
+        width: 100%;
+    }
+}

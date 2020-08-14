@@ -1,0 +1,41 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Denim"
+
+block content
+	include ../blocks/modules/header/header
+	main
+		section
+			.section
+				.section__top
+					h2.section__title Bestsellers
+					.section__link.tablet.desktop
+						a(href="#") View all
+				.section__body
+					.section__list.bestsellers
+						.bestsellers__item
+							.bestsellers__img
+								+picture('jacket', 'jpg', 'bestsellers/')
+							.bestsellers__name Jacket
+							.bestsellers__price $ 120
+						.bestsellers__item
+							.bestsellers__img
+								+picture('overalls', 'jpg', 'bestsellers/')
+							.bestsellers__name Overalls
+							.bestsellers__price $ 140
+						.bestsellers__item
+							.bestsellers__img
+								+picture('jacket2', 'jpg', 'bestsellers/')
+							.bestsellers__name Jacket
+							.bestsellers__price $ 90
+						.bestsellers__item
+							.bestsellers__img
+								+picture('overalls2', 'jpg', 'bestsellers/')
+							.bestsellers__name Overalls
+							.bestsellers__price $ 160
+					.section__link.section__link_bottom.mobile
+						a(href="#") View all		
+block scripts
+	script(src="js/main.js")
