@@ -2,40 +2,41 @@ header
     .header
         .header__top
             .logo.header__logo Nîmes
-        .header__body
-            nav.header__nav
-                ul.header__links
-                    li.header__link
-                        a(href="") Woman   
-                    li.header__link
-                        a(href="") Man
-                    li.header__link
-                        a(href="") New
-                .header__icons
-                    .header__icon.mobile.tablet
-                        +svg("search")
-                    .header__icon.mobile.tablet   
-                        +svg("cart")
-                    .header__icon.header__icon_arrow.desktop
-                        +svg("arrow-down")
-            .header__content
-                .header__img
-                    .header__picture
-                        +picture('header-img', 'jpg', 'header/', 'Photo')
-                .header__text
-                    p.header__subtitle The quality you deserve
-                    h1.header__title DENIM
-                    button.btn.header__btn Check new collection
-            .header__nav.header__nav_right
-                .header__icons
-                    .header__icon.header__icon_arrow.tablet    
-                        +svg("arrow-down")
-                    .header__icon.desktop
-                        +svg("search")
-                    .header__icon.desktop    
-                        +svg("cart")    
-                ul.header__links
-                    li.header__link.tablet.desktop
-                        a(href="#") Instagram
-                    li.header__link.tablet.desktop
-                        a(href="#") Facebook    
+        .header__wrapper    
+            .header__body
+                nav.header__nav
+                    ul.header__links
+                        li.header__link
+                            a(href="") Woman   
+                        li.header__link
+                            a(href="") Man
+                        li.header__link
+                            a(href="") New
+                    .header__icons
+                        .header__icon.mobile.tablet
+                            +svg("search")
+                        .header__icon.mobile.tablet   
+                            +svg("cart")
+                        .header__icon.header__icon_arrow.desktop
+                            +svg("arrow-down")
+                .header__content
+                    .header__img
+                        .header__picture
+                            +picture('header-img', 'jpg', 'header/', 'Photo')
+                    .header__text
+                        p.header__subtitle The quality you deserve
+                        h1.header__title DENIM
+                        button.btn.header__btn Check new collection
+                .header__nav.header__nav_right
+                    .header__icons
+                        .header__icon.header__icon_arrow.tablet    
+                            +svg("arrow-down")
+                        .header__icon.desktop
+                            +svg("search")
+                        .header__icon.desktop    
+                            +svg("cart")    
+                    ul.header__links
+                        li.header__link.tablet.desktop
+                            a(href="#") Instagram
+                        li.header__link.tablet.desktop
+                            a(href="#") Facebook    
