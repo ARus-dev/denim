@@ -15,23 +15,23 @@ block content
 						a(href="#") View all
 				.section__body
 					.section__list.bestsellers
-						.bestsellers__item
-							.bestsellers__img
+						.section__item
+							.section__img
 								+picture('jacket', 'jpg', 'bestsellers/')
 							.bestsellers__name Jacket
 							.bestsellers__price $ 120
-						.bestsellers__item
-							.bestsellers__img
+						.section__item
+							.section__img
 								+picture('overalls', 'jpg', 'bestsellers/')
 							.bestsellers__name Overalls
 							.bestsellers__price $ 140
-						.bestsellers__item
-							.bestsellers__img
+						.section__item
+							.section__img
 								+picture('jacket2', 'jpg', 'bestsellers/')
 							.bestsellers__name Jacket
 							.bestsellers__price $ 90
-						.bestsellers__item
-							.bestsellers__img
+						.section__item
+							.section__img
 								+picture('overalls2', 'jpg', 'bestsellers/')
 							.bestsellers__name Overalls
 							.bestsellers__price $ 160
@@ -47,5 +47,31 @@ block content
 							button.btn.banner__btn Shop now
 					.banner__img
 						+picture("banner", "jpg", "main/")
+		section
+			.section
+				.section__top
+					h2.section__title Shop by category
+					.section__link.tablet.desktop
+						a(href="#") View all
+				.section__body
+					.section__list.categories
+						.section__item.categories__item
+							.section__img
+								+picture('jeans', 'jpg', 'categories/')
+							.categories__name Jeans
+						.section__item.categories__item
+							.section__img
+								+picture('shirts', 'jpg', 'categories/')
+							.categories__name Shirts
+						.section__item.categories__item
+							.section__img
+								+picture('overalls', 'jpg', 'categories/')
+							.categories__name Overalls
+						.section__item.categories__item
+							.section__img
+								+picture('jackets', 'jpg', 'categories/')
+							.categories__name Jackets
+					.section__link.section__link_bottom.mobile
+						a(href="#") View all	
 block scripts
 	script(src="js/main.js")
