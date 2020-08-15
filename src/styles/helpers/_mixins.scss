@@ -10,8 +10,8 @@
     justify-content: space-between;
 }
 
-@mixin _1170 {
-    @media (min-width: 1170px){
+@mixin _1366 {
+    @media (min-width: 1366px){
         @content;
     }
 }

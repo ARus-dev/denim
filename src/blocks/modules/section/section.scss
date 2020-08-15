@@ -3,9 +3,14 @@
         margin: 100px 0;
         padding: 0 45px;
     }
-    @include _768 {
+    @include _1024 {
         margin: 130px 0;
         padding: 0 98px;
+    }
+    @include _1366 {
+        width: 1170px;
+        margin: 130px auto;
+        padding: 0;
     }
     margin: 60px 0;
     padding: 0 15px;
@@ -34,6 +39,9 @@
             font-size: 16px;
             font-weight: 500;
         }
+    }
+    &_full {
+        padding: 0;
     }
 }
 
@@ -78,5 +86,81 @@
         }
         font-size: 14px;
         font-weight: 700;
+    }
+}
+
+.banner {
+    @include _768 {
+        flex-direction: row-reverse;
+    }
+    display: flex;
+    flex-direction: column;
+    &__content {
+        @include _768 {
+            width: 48%;
+            padding: 20px 20px 20px 0;
+        }
+        @include _1024 {
+            width: 40.17%;
+            padding: 31px 70px 31px 0;
+        }
+        position: relative;
+        padding: 15px 15px 0;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/img/header/header-img-bg-right.png");
+            background-size: cover;
+        }
+    }
+    &__text {
+        @include _768 {
+            padding: 50px 0 50px 50px;
+            text-align: left;
+        }
+        @include _1366 {
+            padding: 70px 0 70px 70px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 40px 36px;
+        background-color: $color-gray;
+        color: #727a82;
+        font-size: 18px;
+        text-align: center;
+    }
+    &__title {
+        @include _768 {
+            margin: 15px 0 40px;
+        }
+        @include _1024 {
+            margin: 20px 0 50px;
+        }
+        margin: 12px 0 30px;
+    }
+    &__btn {
+        min-width: 150px;
+        max-width: 200px;
+    }
+    &__img {
+        @include _768 {
+            width: 52%;
+        }
+        @include _1024 {
+            width: (100% - 40.17%);
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
