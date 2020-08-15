@@ -1,7 +1,5 @@
 .header {
     &__top {
-        font-size: 24px;
-        font-weight: 800;
         padding: 20px 0;
         text-align: center;
         @include _768 {
